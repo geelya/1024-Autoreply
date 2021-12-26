@@ -1,4 +1,3 @@
-
 import requests
 import re
 import random
@@ -263,7 +262,7 @@ class Autoreply:
         m=Autoreply.getnumber(cookies)
         suc=False
         print('第'+str(ge+1)+'个账号开始时发表帖子:'+m)
-        while n<10 and suc is False:
+        while n<50 and suc is False:
             try:
                 au=''
                 print('第'+str(ge+1)+'个账号当前在回复第'+str(n+1)+'个。')
