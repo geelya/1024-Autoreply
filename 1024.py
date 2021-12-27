@@ -262,14 +262,14 @@ class Autoreply:
         m=Autoreply.getnumber(cookies)
         suc=False
         print('第'+str(ge+1)+'个账号开始时发表帖子:'+m)
-        while n<50 and suc is False:
+        while n<10 and suc is False:
             try:
                 au=''
                 print('第'+str(ge+1)+'个账号当前在回复第'+str(n+1)+'个。')
                 geturl,tid=Autoreply.getonelink(todaylist)
                 reply_news=Autoreply.getreply()
                 res=Autoreply.getmatch(geturl,cookies)
-                sleeptime=random.randint(1024,1500)
+                sleeptime=random.randint(1024,2048)
                 au=Autoreply.postreply(cookies,res,reply_news,tid)
                 if au=='回复成功':
                     print('第'+str(ge+1)+'个账号回复成功')
